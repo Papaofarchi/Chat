@@ -1,11 +1,13 @@
 package org.example.Client.ClientServices;
 
+import lombok.Setter;
 import lombok.SneakyThrows;
 
 import java.io.*;
 import java.net.Socket;
 
 public class ClientGeneralService extends Thread {
+    @Setter
     private ClientGeneralService client;
     private Socket socket;
     private BufferedReader in;
@@ -44,10 +46,6 @@ public class ClientGeneralService extends Thread {
         } catch (IOException e) {
             System.out.println("Fuck your nickname");
         }
-    }
-
-    public void setClient(ClientGeneralService client) {
-        this.client = client;
     }
 
     @SneakyThrows

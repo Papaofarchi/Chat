@@ -6,8 +6,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class ReadMessageService extends Thread {
-    private BufferedReader in;
-    private ClientGeneralService client;
+    private final BufferedReader in;
+    private final ClientGeneralService client;
 
     public ReadMessageService(BufferedReader in, ClientGeneralService client) {
         this.in = in;
